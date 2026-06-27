@@ -727,6 +727,12 @@
       // 成功・エラーどちらも完了画面を表示（GAS側で記録済みのため）
       hide(form);
       show(success);
+      // コンバージョン計測
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18277400530/egTnCJ_0s8YcENL_q4tE',
+        'value': 1.0,
+        'currency': 'JPY'
+      });
       window.scrollTo({ top: document.getElementById('form').offsetTop - 60, behavior: 'smooth' });
     })
     .catch(function(err) {
