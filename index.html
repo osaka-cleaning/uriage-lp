@@ -571,7 +571,7 @@
       <p>内容を確認の上、担当者より<br>2～3営業日以内にご連絡いたします。</p>
     </div>
 
-    <form id="inquiry-form" action="https://script.google.com/macros/s/AKfycbxNHm0ImW8RGjDGW7SYhRe9g3RigUoF4WOEPcMUOymtHbRJ8TyCHlOQPtkroRJ6IUR4KA/exec" method="POST" novalidate>
+    <form id="inquiry-form" action="https://script.google.com/macros/s/AKfycbytRjRhlBsyVqgMbets1qQzamOaKvEa7deO52KFnldYfo38r5-XXR2Yus2fxPeHBKXAGg/exec" method="POST" novalidate>
       <div class="form-group">
         <label for="name">お名前<span class="req">必須</span></label>
         <input type="text" id="name" name="name" placeholder="例：山田 太郎" autocomplete="name">
@@ -613,7 +613,13 @@
       </div>
 
       <div class="form-group">
-        <label for="plot">霊園名・区画番号<span class="opt">わかる範囲で</span></label>
+        <label for="location">お墓の所在地・霊園名<span class="req">必須</span></label>
+        <input type="text" id="location" name="location" placeholder="例：大阪市平野区 瓜破霊園">
+        <p class="error-msg" id="location-error">お墓の所在地・霊園名を入力してください。</p>
+      </div>
+
+      <div class="form-group">
+        <label for="plot">区画番号<span class="opt">わかる範囲で</span></label>
         <input type="text" id="plot" name="plot" placeholder="例：A区 12列 34番">
       </div>
 
@@ -691,6 +697,10 @@
     var emailOk = email !== '' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     valid = setError('email', 'email-error', !emailOk) && valid;
 
+    // お墓の所在地・霊園名（必須）
+    var location = document.getElementById('location').value.trim();
+    valid = setError('location', 'location-error', location === '') && valid;
+
     // 清掃レベル（必須・1つ以上チェック）
     var cleanChecked = document.querySelectorAll('input[name="clean_level"]:checked').length > 0;
     var cleanErr = document.getElementById('clean-level-error');
@@ -718,9 +728,20 @@
     btn.innerHTML = '送信中…<span class="micro">しばらくお待ちください</span>';
 
     // GASへPOST送信
+    // 全フィールドを明示的に送信
+    var formData = new URLSearchParams();
+    formData.append('name',        document.getElementById('name').value.trim());
+    formData.append('tel',         document.getElementById('tel').value.trim());
+    formData.append('email',       document.getElementById('email').value.trim());
+    formData.append('location',    document.getElementById('location').value.trim());
+    formData.append('plot',        document.getElementById('plot').value.trim());
+    formData.append('message',     document.getElementById('message').value.trim());
+    var cleanLevel = document.querySelector('input[name="clean_level"]:checked');
+    formData.append('clean_level', cleanLevel ? cleanLevel.value : '');
+
     fetch(form.action, {
       method: 'POST',
-      body: new FormData(form)
+      body: formData
     })
     .then(function(res) { return res.json(); })
     .then(function(data) {
@@ -746,7 +767,7 @@
   // リアルタイムバリデーション解除（一度送信後のみ）
   var submitted = false;
   form.addEventListener('submit', function () { submitted = true; }, { capture: true });
-  ['name','tel','email'].forEach(function (id) {
+  ['name','tel','email','location'].forEach(function (id) {
     document.getElementById(id).addEventListener('input', function () {
       if (submitted) validateForm();
     });
