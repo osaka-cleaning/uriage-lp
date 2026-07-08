@@ -12,8 +12,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>大阪 お墓掃除代行センター｜無料見積もり受付中</title>
-<meta name="description" content="大阪市全域対応のお墓掃除代行サービス。瓜破霊園をはじめ大阪の各霊園に対応。遠方・高齢でお困りの方へ。見積もり完全無料、追加料金なし、立ち会い不要で写真報告。">
+<title>大阪 お墓掃除代行センター｜無料見積受付中</title>
+<meta name="description" content="大阪市全域対応のお墓掃除代行サービス。瓜破霊園をはじめ大阪の各霊園に対応。遠方・高齢でお困りの方へ。見積完全無料、追加料金なし、立ち会い不要で写真報告。">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -263,6 +263,45 @@
     position: relative; top: -1px;
   }
 
+  /* ── FAQ ── */
+  .faq-item {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 12px; margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    overflow: hidden;
+  }
+  .faq-item summary {
+    list-style: none; cursor: pointer;
+    padding: 18px 46px 18px 18px;
+    font-size: 15px; font-weight: 700; color: var(--navy);
+    position: relative; line-height: 1.5;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::before {
+    content: 'Q'; color: #fff; background: var(--green-dark);
+    font-weight: 900; font-size: 13px;
+    width: 22px; height: 22px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-right: 10px; flex-shrink: 0; position: relative; top: -1px;
+  }
+  .faq-item summary::after {
+    content: '+'; position: absolute; right: 16px; top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px; font-weight: 400; color: var(--green-mid);
+    transition: transform .2s;
+  }
+  .faq-item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+  .faq-a {
+    display: flex; gap: 10px;
+    padding: 0 18px 18px 18px;
+    font-size: 14px; color: var(--muted); line-height: 1.7;
+  }
+  .faq-a-mark {
+    flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--accent); color: #fff; font-weight: 900; font-size: 13px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
   /* ── FORM ── */
   .form-wrap {
     background: #fff; border: 2px solid var(--green-mid);
@@ -403,7 +442,7 @@
     大阪 お墓掃除代行センター
     <span>大阪市全域対応｜瓜破霊園ほか各霊園</span>
   </div>
-  <a href="#form" class="sticky-cta">無料見積もり</a>
+  <a href="#form" class="sticky-cta">無料見積</a>
 </div>
 
 <!-- ════════════════════════════
@@ -417,12 +456,12 @@
     <p class="hero-sub">「安さ」より「安心・手軽さ」を求める方へ。<br>専門スタッフが正確な金額をご提示します。</p>
   </div>
   <div class="hero-guarantee">
-    <strong>お見積もり後の追加費用は一切なし！</strong><br>
+    <strong>お見積後の追加費用は一切なし！</strong><br>
     金額を見てからのキャンセルも<strong>完全無料</strong>です。<br>
     <strong>📱 電話不要・フォームで24時間受付中</strong>
   </div>
   <a href="#form" class="btn-cta">
-    まずは無料で相談・見積もりをする
+    まずは無料で相談・見積をする
     <span class="micro">↓ 30秒で送信完了。費用は一切かかりません</span>
   </a>
   </div>
@@ -446,10 +485,10 @@
   </ul>
   <div class="pain-resolve">
     そのお悩み、まずは当社の<br>
-    <em>「無料見積もり」</em>で解決してください！
+    <em>「無料見積」</em>で解決してください！
   </div>
   <a href="#form" class="btn-cta">
-    無料で見積もりを依頼する <span class="arrow">→</span>
+    無料で見積を依頼する <span class="arrow">→</span>
     <span class="micro">費用ゼロ・キャンセル無料・立ち会い不要</span>
   </a>
   </div>
@@ -468,8 +507,8 @@
 
   <div class="reason-card">
     <div class="reason-num">1</div>
-    <h3>安心の事前見積もり</h3>
-    <p>勝手に作業して高額請求することは<span class="red">絶対にありません</span>。<br>必ず金額をご確認いただいてから作業を開始します。<span class="hl">見積もり後のキャンセルも完全無料</span>です。</p>
+    <h3>安心の事前見積</h3>
+    <p>勝手に作業して高額請求することは<span class="red">絶対にありません</span>。<br>必ず金額をご確認いただいてから作業を開始します。<span class="hl">見積後のキャンセルも完全無料</span>です。</p>
   </div>
 
   <div class="reason-card">
@@ -492,7 +531,7 @@
 
   <div class="section-cta">
     <a href="#form" class="btn-cta">
-      無料で見積もりを依頼する <span class="arrow">→</span>
+      無料で見積を依頼する <span class="arrow">→</span>
       <span class="micro">今すぐ送信・費用は一切かかりません</span>
     </a>
   </div>
@@ -523,7 +562,7 @@
   <div class="section-cta">
     <a href="#form" class="btn-cta">
       うちのお墓もきれいにしてほしい <span class="arrow">→</span>
-      <span class="micro">まずは無料見積もりから</span>
+      <span class="micro">まずは無料見積から</span>
     </a>
   </div>
   </div>
@@ -550,7 +589,7 @@
     <li class="flow-item">
       <div class="flow-num">2</div>
       <div class="flow-body">
-        <h3>お見積もり <span class="free-badge">ここまで無料</span></h3>
+        <h3>お見積 <span class="free-badge">ここまで無料</span></h3>
         <p>スタッフが正確な金額をご提示します。<span class="hl">ここまで費用はゼロ円</span>。キャンセルも自由です。</p>
       </div>
     </li>
@@ -571,7 +610,7 @@
   </ul>
   <div class="section-cta">
     <a href="#form" class="btn-cta">
-      無料で見積もりを依頼する <span class="arrow">→</span>
+      無料で見積を依頼する <span class="arrow">→</span>
       <span class="micro">費用ゼロ・キャンセル無料・立ち会い不要</span>
     </a>
   </div>
@@ -579,13 +618,81 @@
 </section>
 
 <!-- ════════════════════════════
-     6. FORM
+     6. FAQ
+════════════════════════════ -->
+<section class="section section-alt" id="faq">
+  <div class="section-inner">
+  <h2 class="section-title">
+    <span class="en">FAQ</span>
+    よくあるご質問
+  </h2>
+  <div class="divider"></div>
+
+  <details class="faq-item">
+    <summary>当日の立ち合いは必要ですか？</summary>
+    <div class="faq-a">
+      <div class="faq-a-mark">A</div>
+      <p>いいえ、お立ち合いの必要はございません。作業完了後に写真をメールでお送りさせていただきます。遠方にお住まいの方もご安心ください。</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>お墓の汚れがひどい場合は、追加料金は発生しますか？</summary>
+    <div class="faq-a">
+      <div class="faq-a-mark">A</div>
+      <p>一切かかりません！最初のお見積料金以外は必要ありませんのでご安心ください。</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>お支払い方法は何がありますか？</summary>
+    <div class="faq-a">
+      <div class="faq-a-mark">A</div>
+      <p>銀行振込でお願いしております。</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>お花やお線香もお願い出来ますか？</summary>
+    <div class="faq-a">
+      <div class="faq-a-mark">A</div>
+      <p>はい、お線香は料金に含まれております。<br>お花に関しては別途オプションとなりますので、お気軽にご相談ください。</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>見積後に金額が上がったり、キャンセル料金を取られたりしませんか？</summary>
+    <div class="faq-a">
+      <div class="faq-a-mark">A</div>
+      <p>ご提示した見積金額から追加請求することはありません。また、見積内容にご納得いただけない場合のキャンセルも無料です。掲載の目安価格は墓石の大きさや汚れ具合により変動しますが、実際の作業前に必ず金額をご確認いただき、ご了承いただいてから作業を開始します。</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>大阪市以外でも対応してもらえますか？</summary>
+    <div class="faq-a">
+      <div class="faq-a-mark">A</div>
+      <p>大阪市内はもちろん、大阪府内の周辺市町村についても対応可能な場合があります。お住まいの地域が対応エリア内かご不明な場合は、まずはフォームからお気軽にお問い合わせください。</p>
+    </div>
+  </details>
+
+  <div class="section-cta">
+    <a href="#form" class="btn-cta">
+      無料で見積を依頼する <span class="arrow">→</span>
+      <span class="micro">費用ゼロ・キャンセル無料・立ち会い不要</span>
+    </a>
+  </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════
+     7. FORM
 ════════════════════════════ -->
 <section class="section section-alt" id="form">
   <div class="section-inner">
   <h2 class="section-title">
     <span class="en">Free Estimate</span>
-    無料見積もりを依頼する
+    無料見積を依頼する
   </h2>
   <div class="divider"></div>
 
@@ -637,7 +744,7 @@
           <div class="check-item">
             <input type="radio" id="level3" name="clean_level" value="どれか分からない">
             <div class="custom-radio"></div>
-            <label for="level3">どれを選べばいいか分からない<span>標準的なプランのお見積もりを希望</span></label>
+            <label for="level3">どれを選べばいいか分からない<span>標準的なプランのお見積を希望</span></label>
           </div>
         </div>
         <p class="error-msg" id="clean-level-error">清掃レベルを1つ以上選択してください。</p>
@@ -660,11 +767,11 @@
       </div>
 
       <button type="submit" class="btn-cta">
-        無料で見積もりを依頼する <span class="arrow">→</span>
+        無料で見積を依頼する <span class="arrow">→</span>
         <span class="micro">送信後、2～3営業日以内にご連絡します</span>
       </button>
       <p class="form-note">
-        ご入力いただいた個人情報は、お見積もり・サービス提供の目的のみに使用し、<br>第三者への提供は一切行いません。
+        ご入力いただいた個人情報は、お見積・サービス提供の目的のみに使用し、<br>第三者への提供は一切行いません。
       </p>
     </form>
   </div>
