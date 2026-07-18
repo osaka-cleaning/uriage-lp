@@ -433,7 +433,19 @@
     * { transition: none !important; animation: none !important; }
   }
 </style>
-</head>
+<style id="conversion-refinement">
+:root{--green-dark:#123d2e;--green-mid:#2d7257;--green-light:#edf5f0;--accent:#e76528;--accent-dark:#c84b16;--navy:#17382f;--text:#30453e;--muted:#687b74;--border:#dce8e1;--section-bg:#f2f7f4}
+body{font-family:'Hiragino Sans','Yu Gothic',Meiryo,sans-serif;letter-spacing:.01em}
+.sticky-bar{height:68px;padding:9px max(18px,calc((100vw - 1120px)/2));background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(18,61,46,.12);box-shadow:none}.sticky-bar .logo{color:var(--green-dark);font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-size:16px}.sticky-bar .logo span{color:var(--green-mid);opacity:1}.sticky-cta{padding:11px 19px;border-radius:99px;box-shadow:0 7px 18px rgba(231,101,40,.25)}
+.hero{min-height:650px;margin-top:68px;padding:76px 24px;text-align:center;display:grid;place-items:center}.hero.has-photo::before{background-position:center}.hero.has-photo::after{background:linear-gradient(90deg,rgba(6,35,25,.76),rgba(7,41,29,.64) 50%,rgba(6,35,25,.76))}.hero-inner{width:min(1120px,100%);max-width:none;margin:auto;text-align:center}.hero-textbox{display:block;max-width:720px;padding:0;margin:0 auto;background:none;box-shadow:none}.hero-eyebrow{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.35);padding:7px 14px}.hero h1{font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-size:clamp(36px,5vw,62px);line-height:1.38;letter-spacing:.04em}.hero h1 em{color:#f0cd7e;background:linear-gradient(transparent 72%,rgba(240,205,126,.17) 0)}.hero-sub{max-width:650px;margin-left:auto;margin-right:auto;font-size:17px}.hero-guarantee{display:block;width:fit-content;max-width:100%;margin-left:auto;margin-right:auto;background:rgba(5,32,22,.46);border-radius:10px;padding:12px 20px;text-align:center}.hero .btn-cta{max-width:410px;margin:28px auto 0;padding:19px;border-radius:9px}.btn-cta{background:linear-gradient(135deg,#f0793b,var(--accent-dark));box-shadow:0 12px 28px rgba(200,75,22,.3)}.btn-cta:hover{transform:translateY(-2px)}
+.trust-strip{position:relative;z-index:3;margin:0;padding:0 20px;background:linear-gradient(180deg,#123d2e 0%,#174837 100%);border-top:1px solid rgba(255,255,255,.08)}.trust-inner{max-width:900px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);background:transparent}.trust-item{padding:22px 12px;text-align:center;border-right:1px solid rgba(255,255,255,.16)}.trust-item:last-child{border:0}.trust-item strong{display:block;color:#fff;font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-size:18px}.trust-item span{color:rgba(255,255,255,.66);font-size:10px}
+.section{padding:92px 24px}.section-inner{max-width:920px}.section-title{color:var(--green-dark);font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-size:clamp(27px,3.5vw,39px)}.section-title .en{color:#b0812e;letter-spacing:.2em}.divider{background:#b0812e}.pain-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}.pain-list li{margin:0;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:8px;padding:18px;box-shadow:0 6px 20px rgba(18,61,46,.05)}.pain-resolve{max-width:680px;margin:28px auto;padding:23px;border-radius:12px}
+.ba-item{border-radius:14px;box-shadow:0 14px 35px rgba(18,61,46,.13)}.ba-item img{aspect-ratio:1.12/1}.form-wrap{padding:36px;border-radius:16px;box-shadow:0 18px 50px rgba(18,61,46,.12)}footer{background:#0f2d23;padding-bottom:90px}
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:860px;margin:auto}.price-card{position:relative;padding:32px;background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:0 10px 30px rgba(18,61,46,.06)}.price-card h3{color:var(--navy);font-family:'Yu Mincho','Hiragino Mincho ProN',serif;font-size:21px}.price{margin:10px 0 18px;color:var(--green-mid);font-size:13px}.price strong{font-size:31px}.price-card ul{list-style:none;padding:17px 0 0;border-top:1px solid var(--border);font-size:13px}.price-card li{margin:7px 0}.price-card li::before{content:'✓';color:#b0812e;margin-right:8px;font-weight:900}.price-note{margin:22px 0 0;text-align:center;color:var(--muted);font-size:11px}
+.faq-item{border:0;border-bottom:1px solid var(--border);border-radius:0;background:transparent}.faq-item summary{padding:21px 5px}.mobile-estimate{display:none}
+@media(min-width:820px){#reasons .section-inner{display:grid;grid-template-columns:1fr 1fr;gap:15px}#reasons .section-title,#reasons .divider,#reasons .section-cta{grid-column:1/-1}#reasons .reason-card{margin:0;display:grid;grid-template-columns:48px 1fr;column-gap:12px}#reasons .reason-num{grid-row:1/3}.flow-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}.flow-item{padding:17px;border:1px solid var(--border);border-radius:10px}.flow-item:not(:last-child)::after{display:none}}
+@media(max-width:640px){.sticky-bar{height:62px}.sticky-bar .logo{font-size:13px}.hero{min-height:590px;margin-top:62px;padding:52px 20px 72px}.hero h1{font-size:34px}.hero-sub{font-size:14px}.hero-guarantee{font-size:11px}.trust-strip{margin:0;padding:0 10px}.trust-item{padding:17px 4px}.trust-item strong{font-size:13px}.trust-item span{font-size:8px}.section{padding:70px 18px}.pain-list,.price-grid{grid-template-columns:1fr}.form-wrap{padding:25px 18px}.mobile-estimate{display:block;position:fixed;z-index:90;left:10px;right:10px;bottom:calc(7px + env(safe-area-inset-bottom));padding:13px;border-radius:9px;background:linear-gradient(135deg,#f0793b,var(--accent-dark));color:#fff;text-align:center;text-decoration:none;font-size:13px;font-weight:900;box-shadow:0 8px 25px rgba(18,45,35,.35)}}
+</style></head>
 <body>
 
 <!-- STICKY BAR -->
@@ -452,20 +464,20 @@
   <div class="hero-inner">
   <div class="hero-textbox">
     <p class="hero-eyebrow">大阪市全域対応｜瓜破霊園ほか各霊園</p>
-    <h1>大阪でお墓をお持ちの方へ！<br>ご先祖様のお墓、<em>雑草や水垢</em>で<br>荒れていませんか？</h1>
-    <p class="hero-sub">「安さ」より「安心・手軽さ」を求める方へ。<br>専門スタッフが正確な金額をご提示します。</p>
+    <h1>行けない時も、<br><em>大切なお墓</em>を<br>きれいに。</h1>
+    <p class="hero-sub">大阪市内のお墓掃除を、立ち会い不要で代行します。<br>作業前後の写真で、遠方からでも仕上がりをご確認いただけます。</p>
   </div>
-  <div class="hero-guarantee">
-    <strong>お見積後の追加費用は一切なし！</strong><br>
-    金額を見てからのキャンセルも<strong>完全無料</strong>です。<br>
-    <strong>📱 電話不要・フォームで24時間受付中</strong>
-  </div>
+
   <a href="#form" class="btn-cta">
-    まずは無料で相談・見積をする
-    <span class="micro">↓ 30秒で送信完了。費用は一切かかりません</span>
+    無料見積を依頼する
+    <span class="micro">入力約30秒｜見積後のキャンセル無料</span>
   </a>
   </div>
-</section>
+</section><div class="trust-strip" aria-label="サービスの安心ポイント"><div class="trust-inner">
+<div class="trust-item"><strong>お見積 0円</strong><span>金額を見てからご判断</span></div>
+<div class="trust-item"><strong>立ち会い不要</strong><span>遠方からでも依頼可能</span></div>
+<div class="trust-item"><strong>後から追加なし</strong><span>事前提示の金額で作業</span></div>
+</div></div>
 
 <!-- ════════════════════════════
      2. PAIN POINTS
@@ -571,7 +583,14 @@
 <!-- ════════════════════════════
      5. FLOW
 ════════════════════════════ -->
-<section class="section" id="flow">
+<section class="section section-alt" id="price"><div class="section-inner">
+<h2 class="section-title"><span class="en">Service Plan</span>ご希望に合わせて選べます</h2><div class="divider"></div>
+<div class="price-grid">
+<article class="price-card"><h3>基本のお掃除</h3><p class="price">目安 <strong>10,000</strong>円〜</p><ul><li>墓石の水洗い</li><li>区画内の草むしり</li><li>周辺の簡易清掃</li><li>お線香・作業前後の写真報告</li></ul></article>
+<article class="price-card"><h3>本格クリーニング</h3><p class="price">目安 <strong>15,000</strong>円〜</p><ul><li>基本のお掃除内容</li><li>専用洗剤による洗浄</li><li>長年の水垢・黒ずみに対応</li><li>お線香・作業前後の写真報告</li></ul></article>
+</div><p class="price-note">※広さ・汚れの状態・霊園により金額が異なります。お花は別途オプションです。</p>
+<div class="section-cta"><a href="#form" class="btn-cta">わが家のお墓の見積を聞く <span class="arrow">→</span><span class="micro">見積・キャンセル無料</span></a></div>
+</div></section><section class="section" id="flow">
   <div class="section-inner">
   <h2 class="section-title">
     <span class="en">Flow</span>
@@ -793,7 +812,7 @@
   &nbsp;|&nbsp;
   <a href="law.html">特定商取引法に基づく表記</a><br><br>
   &copy; 2026 大阪 お墓掃除代行センター
-</footer>
+</footer><a href="#form" class="mobile-estimate">無料見積を依頼する →</a>
 
 <script>
 (function () {
